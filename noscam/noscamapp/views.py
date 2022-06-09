@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Не скам.")
+    return render(request, 'noscamapp/index.html')

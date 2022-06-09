@@ -22,6 +22,7 @@ from noscamapp.views import index
 from django.urls import path, include
 
 urlpatterns = [
+    path('', index, name='home'),
     path('admin/', admin.site.urls),
     path('home/', include('noscamapp.urls'))
 ]

@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'noscam.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'no_scam',
+        'NAME': 'myproject',
         'USER': 'postgres',
         'PASSWORD': '12341234',
         'HOST': 'localhost',
