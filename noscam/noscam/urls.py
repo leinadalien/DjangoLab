@@ -18,13 +18,14 @@ from django.contrib import admin
 from django.urls import path
 
 from noscam import settings
-from noscamapp.views import index
+from noscamapp.views import NoScamHome, ShowScams
 from django.urls import path, include
 
 urlpatterns = [
-    path('', index, name='home'),
+    path('', NoScamHome.as_view(), name='home'),
     path('admin/', admin.site.urls),
-    path('home/', include('noscamapp.urls'))
+    path('home/', include('noscamapp.urls')),
+    path('scams/int:scamer_id>', ShowScams.as_view(), name="scams")
 ]
 
 if settings.DEBUG:

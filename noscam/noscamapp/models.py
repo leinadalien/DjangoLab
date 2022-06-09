@@ -5,7 +5,7 @@ class Scamer(models.Model):
     name = models.CharField(max_length=20, verbose_name='Никнейм')
     money = models.IntegerField(verbose_name='Зелень')
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/")
-    time_create = models.DateTimeField(auto_now_add=True, verbose_name='Время регестрации')
+    time_create = models.DateTimeField(auto_now_add=True, verbose_name='Время регистрации')
 
     class Meta:
         verbose_name = 'Скамеры'

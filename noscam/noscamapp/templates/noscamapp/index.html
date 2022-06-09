@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%extends 'noscamapp/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<ul class="list-articles">
+	{% for s in scamers %}
+			<li><div class="article-panel">
+	<p class="first">Ник: {{s.name}}</p>
+	<p class="last">Зелень: {{s.money}}</p>
+</div>
+
+{% if s.photo %}
+	<p><img class="img-article-left thumb" src="{{p.photo.url}}"></p>
+{% endif %}
+	<p class="link-read-post"><a href="{{ p.get_absolute_url }}">Посмотреть аферы</a></p>
+			</li>
+	{% endfor %}
+</ul>
+{% endblock %}
